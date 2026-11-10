@@ -14,6 +14,8 @@ class EmployeeService:
         # Добавление нового сотрудника
         if employee.salary <= 0:
             raise InvalidSalaryError("Зарлата должна быть больше нуля")
+        if employee.id <= 0:
+            raise ValueError("ID должен быть положительным числом")
 
         employees = self.repository.get_all()
 

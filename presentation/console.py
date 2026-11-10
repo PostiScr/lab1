@@ -15,16 +15,16 @@ class ConsoleApp:
             print("4. Удалить сотрудника")
             print("0. Выход")
 
-            choise = input("Выберите действие: ").strip()
+            choiсe = input("Выберите действие: ").strip()
 
             try:
-                match choise:
+                match choiсe:
                     case "1":
                         employees = self.service.get_all()
                         if not employees:
                             print("Список пуст.")
                         for emp in employees:
-                            print(f"ID: {emp.id} | Должность: {emp.get_role} | Имя: {emp.name} | Зарплата: {emp.salary}")
+                            print(f"ID: {emp.id} | Должность: {emp.get_role()} | Имя: {emp.name} | Зарплата: {emp.salary}")
 
                     case "2":
                         self._add_employee_menu()
