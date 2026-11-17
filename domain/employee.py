@@ -1,15 +1,22 @@
 from dataclasses import dataclass
+from domain.position import Position
 
 @dataclass
 class Employee:
     # Базовый класс для всех сотрудников
     id: int
     name: str
-    salary: float
+    position_id: int
+    coefficent: float
 
     def get_role(self) -> str:
         # Возвращает должность
         return "Сотрудник"
+
+    def calculate_salary(self, position: Position) -> float:
+        # Вычисление зарплаты
+        return position.base_rate * self.coefficient
+
 
 @dataclass
 class Developer(Employee):

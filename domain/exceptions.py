@@ -7,3 +7,7 @@ class EmployeeNotFoundError(Exception):
 class InvalidSalaryError(Exception):
     # указана некоррекстная зарплата
     pass
+
+class PositionNotFoundError(Exception):
+    # Должность не найдена
+    pass
