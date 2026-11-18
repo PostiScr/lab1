@@ -10,7 +10,7 @@ class PositionService:
         # Получить список должностей
         return self.repository.get_all()
 
-    def add_employee(self, title: str, base_rate: float) -> Position:
+    def add_position(self, title: str, base_rate: float) -> Position:
         # Добавление новой должности
         positions = self.repository.get_all()
         next_id = max((pos.id for pos in positions), default=0) + 1

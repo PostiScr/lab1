@@ -7,7 +7,7 @@ class Employee:
     id: int
     name: str
     position_id: int
-    coefficent: float
+    coefficient: float = 1.0
 
     def get_role(self) -> str:
         # Возвращает должность

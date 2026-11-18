@@ -7,7 +7,7 @@ from infrastructure.json_positions_repository import JsonPositionRepository
 from presentation.console import ConsoleApp
 
 def main() -> None:
-    data_file = Path(__file__).parent / "employees.json"
+    data_file = Path(__file__).parent
 
     emp_rep = JsonEmployeeRepository(data_file / "employees.json")
     pos_rep = JsonPositionRepository(data_file / "positions.json")
